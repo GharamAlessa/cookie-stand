@@ -42,32 +42,34 @@
 // seatle.getavgcookie();
 // console.log(seatle.avgcookie);
 
-let hours=['city','6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm']
+// let hours=['city','6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm']
 
 function random(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 
-function SalmonCookies(cityName, minCustumer, maxCutumer, cookiesAvg, custumerPerHour) {
+function SalmonCookies(cityName, minCustumer, maxCutumer, cookiesAvg) {
 
     this.cityName = cityName;
     this.minCustumer = minCustumer;
     this.maxCutumer = maxCutumer;
     this.cookiesAvg = cookiesAvg;
-    this.custumerPerHour = custumerPerHour;
+   this.totalCookiesPerDay=0;
+   this.cookiesPerHours=[];
+   cookiesPerHour=[];
    
-
-
 }
 
 //prototype*****
-//  SalmonCookies.prototype.total=function() {
-//      this.total=
-//  }
+ SalmonCookies.prototype.total=function() {
+     this.total=
+ }
+
+SalmonCookies.prototype.calcHours =
+
 
 let seatle = new SalmonCookies('Seatle', '23', '65', '6.3');
-
 
 let tokyo = new SalmonCookies('Tokyo', '3', '24', '1.2');
 
@@ -145,3 +147,17 @@ for (let i = 0; i < SalmonCookies.length; i++) {
     // SalmonCookies[i].render;
     
 }
+
+/***************** lab 09 */
+
+let form=document.getElementById('form');
+form.addEventListener('submit',submitter);
+function submitter(e){
+    e.preventDefault();
+    console.log(e);
+
+}
+let city=e.target.cityName.value;
+let min=e.target.minNumber.value;
+let max=e.target.maxNumber.value;
+let avg=e.target.avgNumber.value;
