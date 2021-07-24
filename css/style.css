@@ -87,3 +87,13 @@ h5{
     margin: 15px;
     
 }
+form{
+    margin-top: 20px;
+    padding: 20px;
+    width: 70%;
+
+}
+tr,th,td{
+    border:2px solid
+    
+}

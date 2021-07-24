@@ -170,7 +170,9 @@ nameTd.textContent= this.totalCookiesperDay;
 function makeFooter(){
     let footerRow=document.createElement('tr');
     table.appendChild(footerRow);
-    footerRow.textContent='Totals';
+    let footerRowFirst=document.createElement('td');
+    footerRow.appendChild(footerRowFirst);
+    footerRowFirst.textContent='Totals';
 
 
 
