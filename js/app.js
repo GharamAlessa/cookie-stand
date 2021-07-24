@@ -97,15 +97,15 @@ Shop.prototype.calcCookiesPerHour=function(){
 // SalmonCookies.prototype.calcHours =
 
 
-let seatle = new Shop ('Seatle', '23', '65', '6.3');
+let seatle = new Shop ('Seatle', 23, 65, 6.3);
 
-let tokyo = new Shop('Tokyo', '3', '24', '1.2');
+let tokyo = new Shop('Tokyo', 3, 24, 1.2);
 
-let dubi = new Shop('Dubi', '11', '24', '3.7');
+let dubi = new Shop('Dubi', 11, 24, 3.7);
 
-let paris = new Shop('Paris', '20', '38', '6.2');
+let paris = new Shop('Paris', 20, 38, 6.2);
 
-let lima = new Shop('Lima', '2', '16', '6.4');
+let lima = new Shop('Lima', 2, 16, 6.4);
 
 
 
@@ -147,9 +147,9 @@ lastTh.textContent='Daily Location Total';
 Shop.prototype.render=function(){
     let dataRow=document.createElement('tr');
     table.appendChild(dataRow);
-    let nameTd=document.createElement('td');
+        let nameTd=document.createElement('td');
 
-    dataRow.appendChild(nameTd);
+        dataRow.appendChild(nameTd);
     nameTd.textContent=this.cityName;
 
 
@@ -161,12 +161,18 @@ for (let i = 0; i < hours.length; i++) {
     
 }
 
+ nameTd=document.createElement('td');
+
+dataRow.appendChild(nameTd);
+nameTd.textContent= this.totalCookiesperDay;
 }
 
 function makeFooter(){
     let footerRow=document.createElement('tr');
     table.appendChild(footerRow);
-    footerRow.textContent='Totals';
+    let footerRowFirst=document.createElement('td');
+    footerRow.appendChild(footerRowFirst);
+    footerRowFirst.textContent='Totals';
 
 
 
